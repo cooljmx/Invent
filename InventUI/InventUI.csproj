@@ -46,7 +46,7 @@
     <Reference Include="DevExpress.Xpf.Printing.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FirebirdSql.Data.FirebirdClient, Version=3.2.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Firebird\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <HintPath>..\..\Libraries\FirebirdSql.Data.FirebirdClient.dll</HintPath>
     </Reference>
     <Reference Include="FluentNHibernate">
       <HintPath>..\..\Libraries\FluentNHibernate.dll</HintPath>
