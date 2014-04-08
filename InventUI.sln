@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventUI", "InventUI\InventUI.csproj", "{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encoder", "Encoder\Encoder.csproj", "{5D13A3B6-5B6E-4D63-AF4C-4939AC4A1253}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barcode.Encoder", "Barcode.Encoder\Barcode.Encoder.csproj", "{635D946D-11AA-4891-BD8D-8197E67FC9F8}"
@@ -25,25 +23,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Invent.Service", "http://lo
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		ProjectReferences = "{c8d654d3-2a3c-4bec-9417-36a1e1de9a3c}|Invent.Service.Library.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_56820"
-		Debug.AspNetCompiler.PhysicalPath = "D:\Documents\Borland Studio Projects\asrksources\C#\Invent\Invent.Service\"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\Documents\Borland Studio Projects\asrksources\C#\Invent\Invent.Service\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56820\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_56820"
-		Release.AspNetCompiler.PhysicalPath = "D:\Documents\Borland Studio Projects\asrksources\C#\Invent\Invent.Service\"
+		Release.AspNetCompiler.PhysicalPath = "..\..\Documents\Borland Studio Projects\asrksources\C#\Invent\Invent.Service\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56820\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "D:\Documents\Borland Studio Projects\asrksources\C#\Invent\Invent.Service\"
+		SlnRelativePath = "..\..\Documents\Borland Studio Projects\asrksources\C#\Invent\Invent.Service\"
 		DefaultWebSiteLanguage = "Visual C#"
 		StartServerOnDebug = "false"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.Service.Library", "Invent.Service.Library\Invent.Service.Library.csproj", "{C8D654D3-2A3C-4BEC-9417-36A1E1DE9A3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventUI", "Invent.UI\InventUI.csproj", "{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +51,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D13A3B6-5B6E-4D63-AF4C-4939AC4A1253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5D13A3B6-5B6E-4D63-AF4C-4939AC4A1253}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D13A3B6-5B6E-4D63-AF4C-4939AC4A1253}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -90,6 +86,10 @@ Global
 		{C8D654D3-2A3C-4BEC-9417-36A1E1DE9A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8D654D3-2A3C-4BEC-9417-36A1E1DE9A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8D654D3-2A3C-4BEC-9417-36A1E1DE9A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
