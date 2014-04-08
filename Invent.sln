@@ -43,7 +43,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Invent.Service", "http://lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.Service.Library", "Invent.Service.Library\Invent.Service.Library.csproj", "{C8D654D3-2A3C-4BEC-9417-36A1E1DE9A3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventUI", "Invent.UI\InventUI.csproj", "{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.UI", "Invent.UI\Invent.UI.csproj", "{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
