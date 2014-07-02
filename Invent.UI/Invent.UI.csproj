@@ -99,6 +99,7 @@
     <Compile Include="Models\Model.Card.Register.cs" />
     <Compile Include="Models\Model.Common.cs" />
     <Compile Include="Models\Model.Invent.cs" />
+    <Compile Include="Models\Model.Login.cs" />
     <Compile Include="Models\Model.Register.cs" />
     <Compile Include="Models\Model.RegisterDetail.cs" />
     <Compile Include="Models\ReferencesCollection.cs" />
@@ -123,6 +124,9 @@
     </Compile>
     <Compile Include="UI\Converters\ColorToBrushConverter.cs" />
     <Compile Include="UI\Converters\NotNullConverter.cs" />
+    <Compile Include="UI\LoginUI.xaml.cs">
+      <DependentUpon>LoginUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainWindowControls\InventUserControl.xaml.cs">
       <DependentUpon>InventUserControl.xaml</DependentUpon>
     </Compile>
@@ -160,6 +164,10 @@
     <Page Include="UI\Card.Register.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\LoginUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\MainWindowControls\InventUserControl.xaml">
       <SubType>Designer</SubType>
