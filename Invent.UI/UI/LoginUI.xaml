@@ -2,19 +2,29 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="InventUI.UI.LoginUI"
-        Title="LoginUI" Height="200" Width="500" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" 
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        x:Class="InventUI.UI.LoginUI"
+        xmlns:converters="clr-namespace:InventUI.UI.Converters"
+        Title="LoginUI" Height="200" Width="500" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <dx:DXWindow.Resources>
+        <converters:BoolConverter x:Key="BoolConverter"/>
+    </dx:DXWindow.Resources>
     <dxlc:LayoutControl VerticalAlignment="Stretch" Orientation="Vertical" DataContext="{Binding Model, RelativeSource={RelativeSource AncestorType={x:Type dx:DXWindow}}}">
         <dxlc:LayoutGroup VerticalAlignment="Center" Orientation="Vertical">
             <dxlc:LayoutItem Label="База данных" LabelPosition="Top">
                 <dxe:TextEdit Text="{Binding Database}"/>
             </dxlc:LayoutItem>
-            <dxlc:LayoutGroup>
+            <dxlc:LayoutGroup >
+                <dxlc:LayoutItem Label="Сохранить пароль" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                    <dxe:CheckEdit EditValue="{Binding IsPasswordSave}"/>
+                </dxlc:LayoutItem>
                 <dxlc:LayoutItem Label="Имя пользователя" LabelPosition="Top" HorizontalAlignment="Right">
-                    <dxe:TextEdit Width="150" Text="{Binding UserName}"/>
+                    <dxe:TextEdit Width="150" Text="{Binding UserName}" IsEnabled="{Binding IsPasswordSave, Converter={StaticResource BoolConverter}}"/>
                 </dxlc:LayoutItem>
                 <dxlc:LayoutItem Label="Пароль" LabelPosition="Top" HorizontalAlignment="Right">
-                    <dxe:PasswordBoxEdit Width="120" Text="{Binding Password}"/>
+                    <dxe:PasswordBoxEdit x:Name="PasswordBox" Width="120" IsEnabled="{Binding IsPasswordSave, Converter={StaticResource BoolConverter}}"
+                                         EditValue="{Binding DecryptedPassword, UpdateSourceTrigger=PropertyChanged}"/>
                 </dxlc:LayoutItem>
             </dxlc:LayoutGroup>
         </dxlc:LayoutGroup>

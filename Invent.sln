@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.Service.Library", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.UI", "Invent.UI\Invent.UI.csproj", "{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rade.Tools", "..\Rade\Tools\Tools\Rade.Tools.csproj", "{559256A3-FD00-4190-9741-FA3C3FF9033A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,10 @@ Global
 		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{559256A3-FD00-4190-9741-FA3C3FF9033A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{559256A3-FD00-4190-9741-FA3C3FF9033A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{559256A3-FD00-4190-9741-FA3C3FF9033A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{559256A3-FD00-4190-9741-FA3C3FF9033A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

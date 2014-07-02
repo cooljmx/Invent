@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using InventUI.Models;
+using InventUI.Models.Login;
 
 namespace InventUI.UI
 {

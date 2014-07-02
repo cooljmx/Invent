@@ -1,28 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.IO.Packaging;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Xml.Serialization;
 using Common;
 using FirebirdSql.Data.FirebirdClient;
 using Invent.Entities;
 using InventUI.NHibernate;
-using NHibernate.Dialect;
+using Rade.Tools;
 
-namespace InventUI.Models
+namespace InventUI.Models.Login
 {
     [Serializable]
-    [XmlRootAttribute("InventLogin", Namespace = "", IsNullable = false)]
+    [XmlRoot("InventLogin", Namespace = "", IsNullable = false)]
     public class ModelLogin : VirtualNotifyPropertyChanged
     {
-        private const string LoginFileName = "InventUI.LoginUI.xml";
+        private static readonly string LoginPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Invent";
+        private static readonly string LoginFileName = LoginPath + "\\InventUI.LoginUI.xml";
         private string database;
         private string userName;
         private string password;
-
+        private bool isPasswordSave;
         public ModelLogin()
         {
             IsLogin = false;
@@ -30,13 +27,41 @@ namespace InventUI.Models
 
         public string Database { get { return database; } set { database = value; NotifyPropertyChanged("Database"); } }
         public string UserName { get { return userName; } set { userName = value; NotifyPropertyChanged("UserName"); } }
-        public string Password { get { return password; } set { password = value; NotifyPropertyChanged("Password"); } }
-        
+        public string Password { get { return password; } set { password = value; NotifyPropertyChanged("DecryptedPassword"); } }
+
+        public bool IsPasswordSave
+        {
+            get
+            {
+                return isPasswordSave;
+            }
+            set
+            {
+                isPasswordSave = value;
+                NotifyPropertyChanged("IsPasswordSave");
+            }
+        }
+
+        [XmlIgnore]
+        public string DecryptedPassword
+        {
+            get
+            {
+                return StringTools.DecryptString(password);
+            }
+            set
+            {
+                password = StringTools.CryptString(value);
+                NotifyPropertyChanged("DecryptedPassword");
+            }
+        }
+
         [XmlIgnore]
         public bool IsLogin { get; set; }
 
         public void Save()
         {
+            if (!Directory.Exists(LoginPath)) Directory.CreateDirectory(LoginPath);
             using (var stream = new FileStream(LoginFileName, FileMode.Create, FileAccess.Write))
             {
                 var serializer = new XmlSerializer(typeof (ModelLogin));
@@ -58,17 +83,20 @@ namespace InventUI.Models
         {
             try
             {
-                var sb = new FbConnectionStringBuilder()
+                var sb = new FbConnectionStringBuilder
                 {
                     Database = Database,
                     UserID = UserName,
-                    Password = Password,
+                    Password = DecryptedPassword,
                     Charset = "UTF8",
                     Dialect = 3,
                     Pooling = true
                 };
                 Singleton<HbManager>.Instance.SetConnectionString(sb.ToString());
                 IsLogin = true;
+                if (!IsPasswordSave)
+                    password = null;
+                Save();
             }
             catch (Exception ex)
             {
