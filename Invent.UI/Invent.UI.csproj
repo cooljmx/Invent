@@ -44,24 +44,28 @@
     <Reference Include="DevExpress.Xpf.LayoutControl.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Mvvm.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Printing.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=3.2.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Libraries\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.4.2.0.0\lib\net40-client\FirebirdSql.Data.FirebirdClient.dll</HintPath>
     </Reference>
-    <Reference Include="FluentNHibernate">
-      <HintPath>..\..\Libraries\FluentNHibernate.dll</HintPath>
+    <Reference Include="FluentNHibernate, Version=1.4.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections">
-      <HintPath>..\..\Libraries\Iesi.Collections.dll</HintPath>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
-      <HintPath>..\..\Libraries\log4net.dll</HintPath>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="LV.Common">
       <HintPath>..\..\Libraries\LV.Common.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>..\..\Libraries\NHibernate.dll</HintPath>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -201,6 +205,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

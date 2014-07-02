@@ -21,7 +21,7 @@ namespace InventUI
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            DevExpress.Xpf.Core.ThemeManager.ApplicationThemeName = "Seven";
+            //DevExpress.Xpf.Core.ThemeManager.ApplicationThemeName = "Seven";
 
             var sb = new FbConnectionStringBuilder()
             {
