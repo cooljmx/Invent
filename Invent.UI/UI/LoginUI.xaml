@@ -4,7 +4,7 @@
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
         xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" 
         xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
-        x:Class="InventUI.UI.LoginUI"
+        x:Class="InventUI.UI.LoginUi"
         xmlns:converters="clr-namespace:InventUI.UI.Converters"
         Title="LoginUI" Height="200" Width="500" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
     <dx:DXWindow.Resources>

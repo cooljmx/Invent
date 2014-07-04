@@ -30,27 +30,20 @@
                 </DataTemplate>
             </dxb:BarManager.Resources>
             <dxb:BarManager.Items>
-                <dxb:BarButtonItem x:Name="barButtonItemAdd" ToolTip="Добавить основное средство" ShowScreenTip="True" ItemClick="BarButtonItemAdd_OnItemClick" Glyph="/InventUI;component/Images/Create.png" BarItemDisplayMode="ContentAndGlyph"/>
-                <dxb:BarButtonItem x:Name="barButtonItemRemove" ToolTip="Удалить основное средство" ShowScreenTip="True"   ItemClick="BarButtonItemRemove_OnItemClick" Glyph="/InventUI;component/Images/Delete.png" GlyphSize="Small" BarItemDisplayMode="ContentAndGlyph"/>
-                <dxb:BarButtonItem x:Name="barButtonItemToExcel" ToolTip="Выгрузить в Excel" ShowScreenTip="True"   ItemClick="BarButtonItemToExcel_OnItemClick" Glyph="/InventUI;component/Images/document-excel.png" GlyphSize="Small" BarItemDisplayMode="ContentAndGlyph"/>
+                <dxb:BarButtonItem x:Name="BarButtonItemAdd" ToolTip="Добавить основное средство" ShowScreenTip="True" ItemClick="BarButtonItemAdd_OnItemClick" Glyph="/InventUI;component/Images/Create.png" BarItemDisplayMode="ContentAndGlyph"/>
+                <dxb:BarButtonItem x:Name="BarButtonItemRemove" ToolTip="Удалить основное средство" ShowScreenTip="True"   ItemClick="BarButtonItemRemove_OnItemClick" Glyph="/InventUI;component/Images/Delete.png" GlyphSize="Small" BarItemDisplayMode="ContentAndGlyph"/>
+                <dxb:BarButtonItem x:Name="BarButtonItemToExcel" ToolTip="Выгрузить в Excel" ShowScreenTip="True"   ItemClick="BarButtonItemToExcel_OnItemClick" Glyph="/InventUI;component/Images/document-excel.png" GlyphSize="Small" BarItemDisplayMode="ContentAndGlyph"/>
             </dxb:BarManager.Items>
             <dxb:BarManager.Bars>
                 <dxb:Bar AllowCustomizationMenu="False" AllowQuickCustomization="False" AllowHide="False">
                     <dxb:Bar.DockInfo>
                         <dxb:BarDockInfo ContainerType="Top"/>
                     </dxb:Bar.DockInfo>
-                    <dxb:BarButtonItemLink BarItemName="barButtonItemAdd"/>
-                    <dxb:BarButtonItemLink BarItemName="barButtonItemRemove"/>
+                    <dxb:BarButtonItemLink BarItemName="BarButtonItemAdd"/>
+                    <dxb:BarButtonItemLink BarItemName="BarButtonItemRemove"/>
                     <dxb:BarItemLinkSeparator/>
-                    <dxb:BarButtonItemLink BarItemName="barButtonItemToExcel"/>
+                    <dxb:BarButtonItemLink BarItemName="BarButtonItemToExcel"/>
                 </dxb:Bar>
-                <!--
-                <dxb:Bar x:Name="statusBar" Caption="Status Bar" IsStatusBar="True">
-                    <dxb:Bar.DockInfo>
-                        <dxb:BarDockInfo ContainerType="Bottom"/>
-                    </dxb:Bar.DockInfo>
-                </dxb:Bar>
-                -->
             </dxb:BarManager.Bars>
             <Grid Background="Transparent">
                 <dxg:GridControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding Data}" MouseDoubleClick="grid_OnMouseDoubleClick" SelectedItem="{Binding FocusedGridRow}">
@@ -59,18 +52,6 @@
                             <dxg:GridColumn.CellTemplate>
                                 <DataTemplate>
                                     <DockPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4">
-                                        <!--<Image Source="/InventUI;component/Images/Warning.png" Margin="0,0,5,0" Width="16" Height="16" ToolTip="Местонахождение неизвестно">
-                                            <Image.Style>
-                                                <Style TargetType="{x:Type Image}">
-                                                    <Setter Property="Visibility" Value="Collapsed"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding DataContext.RowData.Row.PlaceCustomKey, RelativeSource={RelativeSource Mode=TemplatedParent}}" Value="-1">
-                                                            <Setter Property="Visibility" Value="Visible"/>
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </Image.Style>
-                                        </Image>-->
                                         <Image Source="/InventUI;component/Images/Home.png" Margin="0,0,5,0" Width="16" Height="16" ToolTip="В гараже">
                                             <Image.Style>
                                                 <Style TargetType="{x:Type Image}">

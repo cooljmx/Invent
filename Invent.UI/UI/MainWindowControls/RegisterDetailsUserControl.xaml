@@ -13,26 +13,19 @@
     <Grid>
         <dxb:BarManager Visibility="Visible" Margin="0,0,0,0">
             <dxb:BarManager.Items>
-                <dxb:BarButtonItem x:Name="barButtonItemToExcel" ToolTip="Выгрузить в Excel" ShowScreenTip="True"   ItemClick="BarButtonItemToExcel_OnItemClick" Glyph="/InventUI;component/Images/document-excel.png" GlyphSize="Small" BarItemDisplayMode="ContentAndGlyph"/>
+                <dxb:BarButtonItem x:Name="BarButtonItemToExcel" ToolTip="Выгрузить в Excel" ShowScreenTip="True"   ItemClick="BarButtonItemToExcel_OnItemClick" Glyph="/InventUI;component/Images/document-excel.png" GlyphSize="Small" BarItemDisplayMode="ContentAndGlyph"/>
             </dxb:BarManager.Items>
             <dxb:BarManager.Bars>
                 <dxb:Bar AllowCustomizationMenu="False" AllowQuickCustomization="False" AllowHide="False">
                     <dxb:Bar.DockInfo>
                         <dxb:BarDockInfo ContainerType="Top"/>
                     </dxb:Bar.DockInfo>
-                    <dxb:BarButtonItemLink BarItemName="barButtonItemToExcel"/>
+                    <dxb:BarButtonItemLink BarItemName="BarButtonItemToExcel"/>
                 </dxb:Bar>
-                <!--
-                <dxb:Bar x:Name="statusBar" Caption="Status Bar" IsStatusBar="True">
-                    <dxb:Bar.DockInfo>
-                        <dxb:BarDockInfo ContainerType="Bottom"/>
-                    </dxb:Bar.DockInfo>
-                </dxb:Bar>
-                -->
             </dxb:BarManager.Bars>
             <Grid Background="Transparent">
                 <dxg:GridControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding Data}" MouseDoubleClick="grid_OnMouseDoubleClick" 
-                                 SelectedItem="{Binding FocusedGridRow}" Name="gridMain" Loaded="gridMain_Loaded">
+                                 SelectedItem="{Binding FocusedGridRow}" Name="GridMain" Loaded="gridMain_Loaded">
                     <dxg:GridControl.Columns>
                         <dxg:GridColumn Header="Наименование компонента" FieldName="DetailName">
                             <dxg:GridColumn.CellTemplate>
@@ -165,31 +158,6 @@
                                 </DataTemplate>
                             </dxg:GridColumn.CellTemplate>
                         </dxg:GridColumn>
-                        <!--
-                        <dxg:GridColumn FieldName="HasQuestions" FixedWidth="True" Width="30" HorizontalHeaderContentAlignment="Center" ToolTip="Имеются вопросы">
-                            <dxg:GridColumn.HeaderTemplate>
-                                <DataTemplate>
-                                    <Image Source="/InventUI;component/Images/Question.png" Stretch="None" />
-                                </DataTemplate>
-                            </dxg:GridColumn.HeaderTemplate>
-                            <dxg:GridColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Image Source="/InventUI;component/Images/Question.png" Stretch="None">
-                                        <Image.Style>
-                                            <Style TargetType="Image">
-                                                <Setter Property="Visibility" Value="Collapsed"/>
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=DataContext.RowData.Row.HasQuestions}" Value="True">
-                                                        <Setter Property="Visibility" Value="Visible"/>
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </Image.Style>
-                                    </Image>    
-                                </DataTemplate>
-                            </dxg:GridColumn.CellTemplate>
-                        </dxg:GridColumn>
-                        -->
                     </dxg:GridControl.Columns>
                     <dxg:GridControl.GroupSummary>
                         <dxg:GridSummaryItem Alignment="Left" SummaryType="Count" DisplayFormat="Кол-во: {0}" FieldName="DetailId"/>

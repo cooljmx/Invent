@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7900C2DB-4CDB-4C37-BD7B-435C05277139}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Invent.Models</RootNamespace>
+    <AssemblyName>Invent.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.4.2.0.0\lib\net40-client\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="LV.Common">
+      <HintPath>..\..\Libraries\LV.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Item.Common.cs" />
+    <Compile Include="Item.Invent.cs" />
+    <Compile Include="Item.Invent.Filter.cs" />
+    <Compile Include="Login\Model.Login.cs" />
+    <Compile Include="Model.Card.Register.cs" />
+    <Compile Include="Model.Common.cs" />
+    <Compile Include="Model.Invent.cs" />
+    <Compile Include="Model.Register.cs" />
+    <Compile Include="Model.RegisterDetail.cs" />
+    <Compile Include="NHibernate\HBManager.cs" />
+    <Compile Include="Printer\PrinterDetailType.cs" />
+    <Compile Include="Printer\PrinterPlace.cs" />
+    <Compile Include="Printer\PrinterRegister.cs" />
+    <Compile Include="Printer\PrinterRegisterDetail.cs" />
+    <Compile Include="Printer\PrinterStatus.cs" />
+    <Compile Include="Printer\PrinterUser.cs" />
+    <Compile Include="Printer\PrinterWorkPlace.cs" />
+    <Compile Include="Printer\StickPrinter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferencesCollection.cs" />
+    <Compile Include="References\Model.Reference.SpUsers.cs" />
+    <Compile Include="References\Model.Reference.WorkPlaces.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Rade\Tools\Tools\Rade.Tools.csproj">
+      <Project>{559256a3-fd00-4190-9741-fa3c3ff9033a}</Project>
+      <Name>Rade.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invent.Entities\Invent.Entities.csproj">
+      <Project>{61484625-c5dd-4a64-9ffd-d44b78ff7c73}</Project>
+      <Name>Invent.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invent.Interfaces\Invent.Interfaces.csproj">
+      <Project>{5dd8e2f2-a9f7-45e1-99e8-3e5b5e69e76f}</Project>
+      <Name>Invent.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

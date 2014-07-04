@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encoder", "Encoder\Encoder.csproj", "{5D13A3B6-5B6E-4D63-AF4C-4939AC4A1253}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barcode.Encoder", "Barcode.Encoder\Barcode.Encoder.csproj", "{635D946D-11AA-4891-BD8D-8197E67FC9F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barcode.Encoder.Test", "Barcode.Encoder.Test\Barcode.Encoder.Test.csproj", "{49EF9B81-1D7B-4FE5-8818-8E6D95547C09}"
@@ -17,35 +15,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Printer.BrotherРТ2700VP.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.Entities", "Invent.Entities\Invent.Entities.csproj", "{61484625-C5DD-4A64-9FFD-D44B78FF7C73}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Invent.Service", "http://localhost:56820", "{17325EB3-9403-4407-8053-978BA8C3D02E}"
-	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{c8d654d3-2a3c-4bec-9417-36a1e1de9a3c}|Invent.Service.Library.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_56820"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\Documents\Borland Studio Projects\asrksources\C#\Invent\Invent.Service\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56820\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_56820"
-		Release.AspNetCompiler.PhysicalPath = "..\..\Documents\Borland Studio Projects\asrksources\C#\Invent\Invent.Service\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56820\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\Documents\Borland Studio Projects\asrksources\C#\Invent\Invent.Service\"
-		DefaultWebSiteLanguage = "Visual C#"
-		StartServerOnDebug = "false"
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.Service.Library", "Invent.Service.Library\Invent.Service.Library.csproj", "{C8D654D3-2A3C-4BEC-9417-36A1E1DE9A3C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.UI", "Invent.UI\Invent.UI.csproj", "{1E11A3E4-CBED-4C48-82F4-DD5AFA2178F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rade.Tools", "..\Rade\Tools\Tools\Rade.Tools.csproj", "{559256A3-FD00-4190-9741-FA3C3FF9033A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.Web", "Invent.Web\Invent.Web.csproj", "{462C4605-1B8C-4051-9CBB-A6472523C7BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.Web.Tests", "Invent.Web.Tests\Invent.Web.Tests.csproj", "{46A900F0-172A-42BD-BA83-818ADCEEB3AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invent.Models", "Invent.Models\Invent.Models.csproj", "{7900C2DB-4CDB-4C37-BD7B-435C05277139}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +33,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5D13A3B6-5B6E-4D63-AF4C-4939AC4A1253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D13A3B6-5B6E-4D63-AF4C-4939AC4A1253}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D13A3B6-5B6E-4D63-AF4C-4939AC4A1253}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D13A3B6-5B6E-4D63-AF4C-4939AC4A1253}.Release|Any CPU.Build.0 = Release|Any CPU
 		{635D946D-11AA-4891-BD8D-8197E67FC9F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{635D946D-11AA-4891-BD8D-8197E67FC9F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{635D946D-11AA-4891-BD8D-8197E67FC9F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -80,10 +56,6 @@ Global
 		{61484625-C5DD-4A64-9FFD-D44B78FF7C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61484625-C5DD-4A64-9FFD-D44B78FF7C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61484625-C5DD-4A64-9FFD-D44B78FF7C73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17325EB3-9403-4407-8053-978BA8C3D02E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17325EB3-9403-4407-8053-978BA8C3D02E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17325EB3-9403-4407-8053-978BA8C3D02E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{17325EB3-9403-4407-8053-978BA8C3D02E}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{C8D654D3-2A3C-4BEC-9417-36A1E1DE9A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C8D654D3-2A3C-4BEC-9417-36A1E1DE9A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8D654D3-2A3C-4BEC-9417-36A1E1DE9A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -96,6 +68,18 @@ Global
 		{559256A3-FD00-4190-9741-FA3C3FF9033A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{559256A3-FD00-4190-9741-FA3C3FF9033A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{559256A3-FD00-4190-9741-FA3C3FF9033A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462C4605-1B8C-4051-9CBB-A6472523C7BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462C4605-1B8C-4051-9CBB-A6472523C7BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462C4605-1B8C-4051-9CBB-A6472523C7BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462C4605-1B8C-4051-9CBB-A6472523C7BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A900F0-172A-42BD-BA83-818ADCEEB3AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A900F0-172A-42BD-BA83-818ADCEEB3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A900F0-172A-42BD-BA83-818ADCEEB3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A900F0-172A-42BD-BA83-818ADCEEB3AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7900C2DB-4CDB-4C37-BD7B-435C05277139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7900C2DB-4CDB-4C37-BD7B-435C05277139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7900C2DB-4CDB-4C37-BD7B-435C05277139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7900C2DB-4CDB-4C37-BD7B-435C05277139}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

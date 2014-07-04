@@ -44,7 +44,7 @@ namespace InventUI
 
         private void DXWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            var login = new LoginUI();
+            var login = new LoginUi();
             login.ShowDialog();
             if (!login.Model.IsLogin)
                 Application.Current.Shutdown();

@@ -1,17 +1,16 @@
 ﻿using System.Windows;
-using InventUI.Models;
-using InventUI.Models.Login;
+using Invent.Models.Login;
 
 namespace InventUI.UI
 {
     /// <summary>
     /// Interaction logic for LoginUI.xaml
     /// </summary>
-    public partial class LoginUI
+    public partial class LoginUi
     {
         private readonly ModelLogin model = ModelLogin.Load();
         public ModelLogin Model { get { return model; } }
-        public LoginUI()
+        public LoginUi()
         {
             InitializeComponent();
         }

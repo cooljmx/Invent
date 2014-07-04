@@ -49,6 +49,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarCodeGenerator">
+      <HintPath>..\packages\BarcodeGenerator.1.0.0.0\lib\BarCodeGenerator.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Core.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -88,6 +91,7 @@
     <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -108,28 +112,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\Item.Common.cs" />
-    <Compile Include="Models\Item.Invent.cs" />
-    <Compile Include="Models\Item.Invent.Filter.cs" />
     <Compile Include="UI\Converters\BoolConverter.cs" />
-    <Compile Include="Models\Model.Card.Register.cs" />
-    <Compile Include="Models\Model.Common.cs" />
-    <Compile Include="Models\Model.Invent.cs" />
-    <Compile Include="Models\Login\Model.Login.cs" />
-    <Compile Include="Models\Model.Register.cs" />
-    <Compile Include="Models\Model.RegisterDetail.cs" />
-    <Compile Include="Models\ReferencesCollection.cs" />
-    <Compile Include="Models\References\Model.Reference.SpUsers.cs" />
-    <Compile Include="Models\References\Model.Reference.WorkPlaces.cs" />
-    <Compile Include="NHibernate\HBManager.cs" />
-    <Compile Include="Printer\PrinterDetailType.cs" />
-    <Compile Include="Printer\PrinterPlace.cs" />
-    <Compile Include="Printer\PrinterRegister.cs" />
-    <Compile Include="Printer\PrinterRegisterDetail.cs" />
-    <Compile Include="Printer\PrinterStatus.cs" />
-    <Compile Include="Printer\PrinterUser.cs" />
-    <Compile Include="Printer\PrinterWorkPlace.cs" />
-    <Compile Include="Printer\StickPrinter.cs" />
     <Compile Include="Tools\DocumentPanelManager.cs" />
     <Compile Include="Tools\UIHelper.cs" />
     <Compile Include="UI\Card.InventFilter.xaml.cs">
@@ -260,6 +243,10 @@
       <Project>{5dd8e2f2-a9f7-45e1-99e8-3e5b5e69e76f}</Project>
       <Name>Invent.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Invent.Models\Invent.Models.csproj">
+      <Project>{7900c2db-4cdb-4c37-bd7b-435c05277139}</Project>
+      <Name>Invent.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Create.png" />
@@ -300,6 +287,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
