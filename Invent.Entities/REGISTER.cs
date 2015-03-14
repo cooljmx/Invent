@@ -34,7 +34,7 @@ namespace Invent.Entities
         public RegisterMap(){
             Table("REGISTER");
             Id(x => x.Id).Column("ID_REGISTER").GeneratedBy.TriggerIdentity();
-            Map(x => x.RecordPrimaryKey).Column("ID_REGISTER");
+            Map(x => x.RecordPrimaryKey).Column("ID_REGISTER").ReadOnly();  // Чтобы значение не было перезатерто
             Map(x => x.InvName).Column("INV_NAME");
             Map(x => x.InvNumber).Column("INV_NUMBER");
             Map(x => x.DateInput).Column("DATE_INPUT");

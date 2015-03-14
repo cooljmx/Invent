@@ -30,8 +30,7 @@ namespace InventUI.NHibernate
         public void SetConnectionString(string aConnectionString)
         {
             if (factory == null)
-                factory = CreateSessionFactory(aConnectionString);
-        }
+                factory = CreateSessionFactory(aConnectionString);}
 
         private ISessionFactory CreateSessionFactory(string aConnectionString)
         {

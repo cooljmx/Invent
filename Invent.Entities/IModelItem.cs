@@ -8,4 +8,5 @@ namespace Invent.Entities
     public interface IModelItem
     {
         Int64 RecordPrimaryKey { get; }
-    }}
+    }
+}
